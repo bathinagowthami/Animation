@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/Lenovo/OneDrive/Desktop/animation.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 78vh;
+            width: 97vw;
+        }
+       #button_box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 100px;
+        background-color: rgb(224, 229, 220);
+        overflow: hidden;
+        border-radius: 100px;
+        position: relative;
+       } 
+       #rotating_line{
+        width: 500px;
+        height: 80px;
+        background: linear-gradient(45deg,blue,green);
+        rotate: -30deg;
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+       
+    }
+
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+
+    }
+    
+    button{
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        margin-top: 80px;
+        border-radius:100px;
+        border: none;
+        font-size: 30px;
+        cursor:pointer;
+
+    }
+    </style>
+    
+</head>
+<body>
+    
+    <h1>BUTTON</h1>
+    <div id="button_box">
+        <div id="rotating_line"></div>
+    </div>
+    <button type="button">clik here</button>
+
+
+</body></html>
